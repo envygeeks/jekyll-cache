@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
 
   spec.add_development_dependency("rspec", ">= 3", "< 4")
-  spec.add_development_dependency("activesupport", ">= 4.0", "< 6.0")
+  spec.add_runtime_dependency("activesupport", ">= 4.0", "< 6.0")
   spec.add_development_dependency("luna-rspec-formatters", "~> 3.7")
   spec.add_runtime_dependency("jekyll-log-wrapper", "~> 1.0")
   spec.add_runtime_dependency("jekyll-sanity", "~> 1.0")
