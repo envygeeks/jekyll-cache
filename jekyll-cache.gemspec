@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description = "Caching for Jekyll"
   spec.homepage = "http://github.com/envygeeks/jekyll-cache"
   spec.summary = "A cache library that wraps around ActiveSupport"
-  spec.files = %W(Gemfile) + Dir["lib/**/*"]
+  spec.files = %w(Gemfile) + Dir["lib/**/*"]
   spec.required_ruby_version = ">= 2.1.0"
   spec.email = ["jordon@envygeeks.io"]
   spec.require_paths = ["lib"]

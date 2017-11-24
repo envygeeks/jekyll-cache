@@ -16,7 +16,7 @@ describe Jekyll::Cache::MemoryStore do
   #
 
   describe "#middleware" do
-    it "should be nil" do
+    it "nil" do
       expect(cache.middleware).to(be_nil)
     end
   end

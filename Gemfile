@@ -1,10 +1,18 @@
+# Frozen-string-literal: true
+# Copyright: 2017 - MIT License
+# Encoding: utf-8
+
 source "https://rubygems.org"
 gemspec
 
-gem "rake"
-gem "pry"
+group :development do
+  gem "pry"
+  gem "rubocop"
+  gem "rake"
 
-if ENV["JEKYLL_VERSION"]
-  # So we can test across all our supported.
-  gem "jekyll", "~> #{ENV["JEKYLL_VERSION"]}"
+  group :test do
+    if ENV["JEKYLL_VERSION"]
+      gem "jekyll", "~> #{ENV['JEKYLL_VERSION']}"
+    end
+  end
 end

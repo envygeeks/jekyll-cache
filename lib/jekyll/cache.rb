@@ -6,12 +6,11 @@ require "jekyll/sanity"
 require "jekyll/log_wrapper"
 require "jekyll"
 
-
 module Jekyll
   module Cache
-    autoload   :FileStore, "jekyll/cache/file_store"
-    autoload :MemoryStore, \
-      "jekyll/cache/memory_store"
+    autoload :FileStore, "jekyll/cache/file_store"
+    autoload :MemoryStore, "jekyll/cache/memory_store"
+    autoload :NullStore, "jekyll/cache/null_store"
 
     # --
     # Clear the entire cache.
@@ -19,9 +18,7 @@ module Jekyll
     # @return [true,false]
     # --
     def self.clear
-      if Jekyll.cache_dir && Jekyll.cache_dir.directory?
-        return Jekyll.cache_dir.rm_rf
-      end
+      Jekyll.cache_dir.rm_r if Jekyll.cache_dir&.directory?
     end
 
     # --

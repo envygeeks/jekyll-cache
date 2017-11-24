@@ -25,9 +25,6 @@ module Jekyll
       end
 
       # --
-      # So that users don't freak out.
-      # @return nil
-      # --
       def middleware
         nil
       end

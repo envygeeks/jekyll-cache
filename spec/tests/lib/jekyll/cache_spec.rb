@@ -12,8 +12,8 @@ describe Jekyll::Cache do
   #
 
   describe ".cache" do
-    it "should be a FileStore" do
-      expect(Jekyll.cache).to(be_a(Jekyll::Cache::FileStore))
+    it "FileStore" do
+      expect(Jekyll.cache).to be_a(Jekyll::Cache::FileStore)
     end
   end
 
@@ -22,16 +22,14 @@ describe Jekyll::Cache do
   describe ".clear" do
     before :each do
       cache.write("hello", "world")
-      expect(cache.read("hello")).
-        to(eq("world"))
+      expect(cache.read("hello")).to eq("world")
     end
 
     #
 
     it "should delete the directory" do
       cache.clear
-      expect(cache.read("hello")).
-        to(be_nil)
+      expect(cache.read("hello")).to be_nil
     end
   end
 

@@ -18,21 +18,28 @@ describe Jekyll::Cache::FileStore do
   #
 
   describe "#middleware" do
-    it "should be nil" do
-      expect(cache.middleware).to(be_nil)
+    it "nil" do
+      expect(cache.middleware).to be_nil
     end
   end
 
   #
 
   describe "#fetch" do
-    context "opts[:expires_in]" do
-      context "is set to 0.minutes" do
-        it "should not save any cache entires" do
-          result = cache.fetch("hello", expires_in: 0.minutes) { "world" }
+    context "w/ opts[:expires_in]" do
+      context "w/ 0.minutes" do
+        let :result do
+          cache.fetch "hello", expires_in: 0.minutes do
+            "world"
+          end
+        end
+
+        #
+
+        it "doesn't save" do
           expect(result).to(eq("world"))
-          expect(cache.read("hello")).
-            to(be_nil)
+          expect(cache.read("hello")).to \
+            be_nil
         end
       end
     end
@@ -41,8 +48,8 @@ describe Jekyll::Cache::FileStore do
   #
 
   describe "#expires_in" do
-    it "should return a default expires" do
-      expect(cache.send(:expires_in)).to(be_a(Integer))
+    it "gives Int" do
+      expect(cache.send(:expires_in)).to be_a(Integer)
     end
   end
 

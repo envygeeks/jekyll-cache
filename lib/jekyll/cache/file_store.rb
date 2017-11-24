@@ -15,6 +15,11 @@ module Jekyll
       end
 
       # --
+      def middleware
+        nil
+      end
+
+      # --
       # @return [<EnvyGeeks::Cache>] the cache
       # Overrides the default method so that we can simply
       #   pass in the name of the directory we want to store
@@ -24,14 +29,6 @@ module Jekyll
       def initialize(dir)
         super(Jekyll.cache_dir.join(dir))
         self.logger = Cache.logger
-      end
-
-      # --
-      # So that users don't freak out.
-      # @return nil
-      # --
-      def middleware
-        nil
       end
 
       # --
