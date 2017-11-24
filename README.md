@@ -1,12 +1,4 @@
-<p align=center>
-  <a href=https://goo.gl/BhrgjW>
-    <img src=https://envygeeks.io/badges/paypal-large_1.png alt=Donate>
-  </a>
-  <br>
-  <a href=https://travis-ci.org/envygeeks/jekyll-cache>
-    <img src="https://travis-ci.org/envygeeks/jekyll-cache.svg?branch=master">
-  </a>
-</div>
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/envygeeks/jekyll-cache.svg?style=for-the-badge)](https://codeclimate.com/github/envygeeks/jekyll-cache/maintainability) [![Code Climate](https://img.shields.io/codeclimate/coverage/github/envygeeks/jekyll-cache.svg?style=for-the-badge)](https://codeclimate.com/github/envygeeks/jekyll-cache/test_coverage) [![Travis branch](https://img.shields.io/travis/envygeeks/jekyll-cache/master.svg?style=for-the-badge)](https://travis-ci.org/envygeeks/jekyll-cache) [![Donate](https://img.shields.io/badge/DONATE-USD-green.svg?style=for-the-badge)](https://envygeeks.io#donate) [![Gem](https://img.shields.io/gem/v/jekyll-cache.svg?style=for-the-badge)]()
 
 # Jekyll Cache
 
