@@ -46,3 +46,9 @@ module Jekyll
     @cache ||= Cache::FileStore.new(key)
   end
 end
+
+# --
+Jekyll::Hooks.register :site, :after_init do |s|
+  s.config["exclude"] << ".jekyll-cache/"
+  s.config["exclude"].uniq!
+end
